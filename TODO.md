@@ -8,6 +8,7 @@ Basic
 
 Advance
 * Use Redis to Serve content, and handle cache expiring
+* paginate API results
 
 
 Web Client
