@@ -3,3 +3,14 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  input(ng-model="yourName")
+  h1(ng-bind="yourName")
+
+  #posts(ng-controller="PostCtrl")
+    .post(ng-repeat="post in posts")
+      ul
+        li(ng-bind="post.description")
+        li(ng-bind="post.created_at")
+        li(ng-bind="post.updated_at")
+        li(ng-bind="post.id")
+
