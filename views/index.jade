@@ -13,4 +13,12 @@ block content
         li(ng-bind="post.created_at")
         li(ng-bind="post.updated_at")
         li(ng-bind="post.id")
+        .post_content(ng-bind-html-unsafe="post.post_content")
+
+        .comments
+          .comment(ng-repeat="comment in post.comments")
+            ul
+              li(ng-bind="comment.created_at")
+              li(ng-bind="comment.updated_at")
+              .comment_body(ng-bind-html-unsafe="comment.body")
 

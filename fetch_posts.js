@@ -2,6 +2,7 @@ var restler = require('restler');
 var AUTH = require('./auth_token');
 var _ = require('underscore');
 var when = require('when');
+var marked = require('marked');
 
 var Post = require('./models/post');
 
@@ -47,7 +48,7 @@ function promise_get_post(gist) {
   var deferred = when.defer();
   restler.get(post_url, AUTH)
     .on('success', function(body, resp) {
-      deferred.resolve(body);
+      deferred.resolve(marked(body));
     })
     .on('error', function(err, resp) {
       deferred.reject(err);
@@ -60,6 +61,11 @@ function promise_get_comments(gist) {
   var deferred = when.defer();
   restler.get(comments_url, AUTH)
     .on('success', function(comments, resp) {
+      comments = comments.map(function(orig_comment) {
+        var comment = orig_comment;
+        comment.body = marked(orig_comment.body);
+        return comment;
+      });
       deferred.resolve(comments);
     })
     .on('error', function(err, resp) {
