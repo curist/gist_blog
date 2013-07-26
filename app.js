@@ -7,7 +7,11 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , mongoose = require('mongoose');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/gistblog');
 
 var app = express();
 
@@ -33,3 +37,10 @@ app.get('/users', user.list);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+var fetch_posts = require('./fetch_posts');
+fetch_posts.update();
+setInterval(function() {
+  fetch_posts.update();
+}, 5 * 60 * 1000 /* 5 mins */);
+
