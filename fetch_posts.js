@@ -36,6 +36,7 @@ module.exports.update = function() {
     })
     .on('fail', function(data, resp) {
       console.log(data);
+      console.log(resp.headers.status);
       console.log('Failed to update gists.');
     })
     .on('error', function(err, resp) {
