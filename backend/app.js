@@ -3,11 +3,10 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , api = require('./routes/api')
-  , http = require('http')
-  , path = require('path')
-  , mongoose = require('mongoose');
+var express = require('express');
+var api = require('./routes/api');
+var http = require('http');
+var path = require('path');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/gistblog');
