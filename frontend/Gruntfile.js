@@ -1,10 +1,4 @@
 /*global module:false*/
-var path = require('path');
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-
-var folderMount = function folderMount(connect, point) {
-  return connect.static(path.resolve(point));
-};
 module.exports = function (grunt) {
   grunt.initConfig({
     bower: {
@@ -12,17 +6,6 @@ module.exports = function (grunt) {
         dest: 'public/js/lib',
         options: {
           stripJsAffix: true
-        }
-      }
-    },
-    connect: {
-      server: {
-        options: {
-          port: 1899,
-          base: './public',
-          middleware: function(connect, options) {
-            return [lrSnippet, folderMount(connect, options.base)];
-          }
         }
       }
     },
@@ -115,7 +98,6 @@ module.exports = function (grunt) {
 
   var grunt_tasks = [
     "grunt-bower",
-    "grunt-contrib-connect",
     "grunt-contrib-clean",
     "grunt-compass",
     "grunt-contrib-watch",
@@ -135,7 +117,6 @@ module.exports = function (grunt) {
   ]);
   grunt.registerTask('default', [
                      'build',
-                     'connect',
                      'watch'
   ]);
 
