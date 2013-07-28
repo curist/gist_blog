@@ -1,0 +1,90 @@
+@import "shared_variables";
+
+.post {
+    margin-top: $magic-margin;
+    margin-bottom: $magic-margin * 4;
+
+    overflow: hidden;
+
+    .perma {
+        float: right;
+        padding-right: 10px;
+
+        a {
+            text-decoration: none;
+            color: #ccc;
+        }
+
+        a:hover {
+            color: #222;
+        }
+    }
+}
+
+.post_body {
+    border-right: 1px solid #ccc;
+    @include border-bottom-right-radius(10px);
+}
+
+.post_title {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.post_timestamp {
+    border-bottom: 1px solid #ccc;
+}
+
+.post_content {
+    padding-right: 13px;
+
+    h1 {
+        font-size: 1.2em;
+        margin-top: 1.0em;
+        margin-bottom: 0.3em;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 500px;
+        width: auto;
+        height: auto;
+    }
+
+    li {
+        p {
+            display: inline;
+        }
+
+        // padding except first level list items
+        li {
+            padding-left: 1.5em;
+        }
+    }
+
+    ol, ul {
+        list-style-position: inside;
+    }
+    ul {
+        list-style-type: disc;
+    }
+    ol {
+        list-style-type: decimal;
+    }
+
+    code {
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+        background-color: #eee;
+        border: 1px solid #ccc;
+    }
+
+    @import "highlight.monokai";
+    // highlight.js, set styles for <pre code>
+    pre code {
+        font-family: 'PT Mono', sans-serif;
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+    }
+}
+
