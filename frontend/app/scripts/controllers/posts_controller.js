@@ -1,4 +1,4 @@
-app.controller('PostCtrl', function ($scope, $http) {
+app.controller('PostsCtrl', function ($scope, $http) {
   $http.get('/api/posts')
     .success(function(posts) {
       posts = posts.map(function(post) {

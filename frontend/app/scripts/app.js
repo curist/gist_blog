@@ -7,6 +7,6 @@ app.config(function($routeProvider) {
       controller: 'PostDetailCtrl'})
     .when('/posts', {
       templateUrl: 'partials/posts.html',
-      controller: 'PostCtrl'})
+      controller: 'PostsCtrl'})
     .otherwise({redirectTo: '/posts' });
 });
