@@ -73,7 +73,7 @@ module.exports = function (grunt) {
     },
     watch: {
       bower: {
-        files: ['components/**/*.js'],
+        files: ['bower_components/**/*.js'],
         tasks: ['build'],
         options: {
           livereload: true

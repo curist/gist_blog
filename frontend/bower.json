@@ -2,6 +2,7 @@
   "name": "gist_blog",
   "version": "0.1.0",
   "dependencies": {
-    "angular": "~1.0.7"
+    "angular": "~1.0.7",
+    "moment": "~2.1.0"
   }
 }

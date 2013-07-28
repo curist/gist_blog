@@ -14,21 +14,29 @@ html(ng-app="GistBlog")
           h1 The Place
 
       #posts(ng-controller="PostCtrl")
-        .post(ng-repeat="post in posts")
-          ul
-            li(ng-bind="post.description")
-            li(ng-bind="post.created_at")
-            li(ng-bind="post.updated_at")
-            li(ng-bind="post.id")
-            .post_content(ng-bind-html-unsafe="post.post_content")
+        .post(ng-repeat="post in posts", id="{{post.id}}")
+          .perma
+            a(ng-href="\#{{ post.id }}")¶
 
+          .post_body
+            .post_timestamp(ng-bind="post.real_time")
+            .post_title
+              h2(ng-bind="post.description")
+            .post_content(ng-bind-html-unsafe="post.post_content")
+            br
+            // <a class="show_comments" href="#">Show Comments (<%- comments_count %>)</a>
             .comments
               .comment(ng-repeat="comment in post.comments")
-                ul
-                  li(ng-bind="comment.created_at")
-                  li(ng-bind="comment.updated_at")
-                  .comment_body(ng-bind-html-unsafe="comment.body")
+                .comment_timestamp(title="{{ comment.real_time }}", ng-bind="comment.human_time")
+                .comment_avatar
+                  a(href="https://github.com/{{ comment.user.login }}")
+                    img(ng-src="{{ comment.user.avatar_url }}")
+                .comment_author
+                  a(href="https://github.com/{{ comment.user.login }}", ng-bind="comment.user.login")
+                .comment_content(ng-bind-html-unsafe="comment.body")
+
 
     script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
+    script(src='js/lib/moment.js')
     script(src='js/app.js')
-    script(src="js/controllers/post_controller.js")
+    script(src='js/controllers/post_controller.js')
