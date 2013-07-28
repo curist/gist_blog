@@ -71,30 +71,41 @@ module.exports = function (grunt) {
         }]
       }
     },
-    regarde: {
+    watch: {
       bower: {
         files: ['components/**/*.js'],
-        tasks: ['build', 'livereload']
+        tasks: ['build'],
+        options: {
+          livereload: true
+        }
       },
       jade: {
         files: ['app/views/**/*.jade'],
-        tasks: ['jade', 'livereload']
+        tasks: ['jade'],
+        options: {
+          livereload: true
+        }
       },
       compass: {
         files: ['app/styles/**/*.scss'],
-        tasks: ['compass:dev', 'livereload']
-      },
-      templates: {
-        files: ['app/views/templates/**/*.mtpl'],
-        tasks: ['livereload']
+        tasks: ['compass:dev'],
+        options: {
+          livereload: true
+        }
       },
       javascript: {
         files: ['app/scripts/**/*.js'],
-        tasks: ['copy:scripts', 'livereload']
+        tasks: ['copy:scripts'],
+        options: {
+          livereload: true
+        }
       },
       assets: {
         files: ['assets/**'],
-        tasks: ['copy:assets', 'livereload']
+        tasks: ['copy:assets'],
+        options: {
+          livereload: true
+        }
       }
     },
     clean: {
@@ -120,8 +131,7 @@ module.exports = function (grunt) {
     "grunt-contrib-connect",
     "grunt-contrib-clean",
     "grunt-compass",
-    "grunt-contrib-livereload",
-    "grunt-regarde",
+    "grunt-contrib-watch",
     "grunt-contrib-copy",
     "grunt-jade",
     "grunt-requirejs"
@@ -139,9 +149,8 @@ module.exports = function (grunt) {
   ]);
   grunt.registerTask('default', [
                      'build',
-                     'livereload-start',
                      'connect',
-                     'regarde'
+                     'watch'
   ]);
 
   grunt.registerTask('build:prod', [
