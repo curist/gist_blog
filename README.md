@@ -5,8 +5,9 @@ A GitHub Gist based blog system.
 Web Stack
 =========
 __Server__:
-* express
-* mongoose
+* __express__
+* __mongoose__: MongoDB ODM.
+* __redis__: Caching.
 
 __Client__:
 * angular
