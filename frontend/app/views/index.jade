@@ -1,5 +1,5 @@
 !!!
-html
+html(ng-app="GistBlog")
   head
     meta(charset='utf-8')
     title Gist a Life
@@ -11,5 +11,24 @@ html
     #content
       #header
         div
-          h1 distorted
-      #posts
+          h1 The Place
+
+      #posts(ng-controller="PostCtrl")
+        .post(ng-repeat="post in posts")
+          ul
+            li(ng-bind="post.description")
+            li(ng-bind="post.created_at")
+            li(ng-bind="post.updated_at")
+            li(ng-bind="post.id")
+            .post_content(ng-bind-html-unsafe="post.post_content")
+
+            .comments
+              .comment(ng-repeat="comment in post.comments")
+                ul
+                  li(ng-bind="comment.created_at")
+                  li(ng-bind="comment.updated_at")
+                  .comment_body(ng-bind-html-unsafe="comment.body")
+
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
+    script(src='js/app.js')
+    script(src="js/controllers/post_controller.js")
