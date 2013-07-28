@@ -111,19 +111,6 @@ module.exports = function (grunt) {
     clean: {
       folders: ['public/*']
     },
-    requirejs: {
-      compile: {
-        options: {
-          wrap: false,
-          modules: [{name: "app"}],
-          mainConfigFile: "public/js/app.js",
-          baseUrl: "public/js",
-          dir: "tmp",
-          inlineText: true,
-          preserveLicenseComments: true
-        }
-      }
-    }
   });
 
   var grunt_tasks = [
@@ -133,8 +120,7 @@ module.exports = function (grunt) {
     "grunt-compass",
     "grunt-contrib-watch",
     "grunt-contrib-copy",
-    "grunt-jade",
-    "grunt-requirejs"
+    "grunt-jade"
   ];
   grunt_tasks.forEach(function(grunt_task) {
     grunt.loadNpmTasks(grunt_task);
@@ -158,8 +144,7 @@ module.exports = function (grunt) {
                      'bower',
                      'copy',
                      'jade',
-                     'compass:prod',
-                     'requirejs'
+                     'compass:prod'
   ]);
 };
 
