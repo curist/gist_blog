@@ -1,22 +1,11 @@
 #posts
   .post(ng-repeat="post in posts", id="{{post.id}}")
     .perma
-      a(ng-href="posts/{{ post.id }}")¶
+      a(ng-href="#/posts/{{ post.id }}")¶
 
     .post_body
       .post_timestamp(ng-bind="post.real_time")
       .post_title
-        h2(ng-bind="post.description")
+        h2
+          a(ng-href="#/posts/{{ post.id }}", ng-bind="post.description")
       .post_content(ng-bind-html-unsafe="post.post_content")
-      br
-      // <a class="show_comments" href="#">Show Comments (<%- comments_count %>)</a>
-      .comments
-        .comment(ng-repeat="comment in post.comments")
-          .comment_timestamp(title="{{ comment.real_time }}", ng-bind="comment.human_time")
-          .comment_avatar
-            a(href="https://github.com/{{ comment.user.login }}")
-              img(ng-src="{{ comment.user.avatar_url }}")
-          .comment_author
-            a(href="https://github.com/{{ comment.user.login }}", ng-bind="comment.user.login")
-          .comment_content(ng-bind-html-unsafe="comment.body")
-

@@ -12,6 +12,8 @@ app.controller('PostDetailCtrl', function ($scope, $http, $routeParams) {
         return comment;
       });
 
+      post.comments_count = post.comments.length;
+
       $scope.post = post;
     });
 });
