@@ -1,6 +1,6 @@
 .post
   .perma
-    a(ng-href="posts/{{ post.id }}")¶
+    a(ng-href="#/posts/{{ post.id }}")¶
 
   .post_body
     .post_timestamp(ng-bind="post.real_time")
@@ -8,8 +8,18 @@
       h2(ng-bind="post.description")
     .post_content(ng-bind-html-unsafe="post.post_content")
     br
-    // <a class="show_comments" href="#">Show Comments (<%- comments_count %>)</a>
-    .comments
+
+    a.toggle_comments(
+      href="",
+      ng-click="show_comments = !show_comments",
+      ng-init="show_comments = false")
+      span(ng-hide="show_comments") Show
+      span(ng-show="show_comments") Hide
+      |  Comments (
+      span(ng-bind="post.comments_count")
+      | )
+
+    .comments(ng-show="show_comments")
       .comment(ng-repeat="comment in post.comments")
         .comment_timestamp(title="{{ comment.real_time }}", ng-bind="comment.human_time")
         .comment_avatar

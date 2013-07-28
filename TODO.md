@@ -6,7 +6,6 @@ Web Client
 ==========
 * make code snippet highlighting work
 * comment posting
-* toggle showing comments
 * some animations maybe?
 * further polish styling
 
