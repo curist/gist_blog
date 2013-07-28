@@ -1,0 +1,20 @@
+{
+  "name": "gist_blog",
+  "author": {
+    "name": "curist",
+    "email": "curist.cyc@gmail.com"
+  },
+  "dependencies": {
+    "grunt": "~0.4.0",
+    "grunt-bower": "~0.6.1",
+    "grunt-contrib-connect": "~ 0.2.0",
+    "grunt-contrib-clean": "~ 0.4.0",
+    "grunt-contrib-livereload": "~ 0.1.2",
+    "grunt-regarde": "~ 0.1.1",
+    "grunt-contrib-copy": "~ 0.4.0",
+
+    "grunt-jade": "~ 0.4.0",
+    "grunt-compass": "~ 0.3.9",
+    "grunt-requirejs": "~0.3.1"
+  }
+}

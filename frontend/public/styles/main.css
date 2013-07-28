@@ -1,0 +1,469 @@
+/* line 17, ../../../../../../.rvm/gems/ruby-head/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../.rvm/gems/ruby-head/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../.rvm/gems/ruby-head/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../.rvm/gems/ruby-head/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../.rvm/gems/ruby-head/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../.rvm/gems/ruby-head/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../.rvm/gems/ruby-head/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../.rvm/gems/ruby-head/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../.rvm/gems/ruby-head/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 6, ../../app/styles/main.scss */
+body {
+  overflow-y: scroll;
+  line-height: 1.8em;
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+  color: #444;
+}
+
+/* line 14, ../../app/styles/main.scss */
+h1, h2, h3 {
+  font-weight: 900;
+  text-transform: capitalize;
+  color: #222;
+}
+
+/* line 21, ../../app/styles/main.scss */
+h1 {
+  font-size: 2.5em;
+}
+
+/* line 25, ../../app/styles/main.scss */
+h2 {
+  font-size: 2.2em;
+}
+
+/* line 29, ../../app/styles/main.scss */
+h3 {
+  font-size: 1.7em;
+}
+
+/* line 33, ../../app/styles/main.scss */
+#content {
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 1, ../../app/styles/_header.scss */
+#header {
+  margin-top: 1.2em;
+  margin-bottom: 2.4em;
+}
+/* line 4, ../../app/styles/_header.scss */
+#header h1 {
+  font-size: 5.0em;
+}
+
+/* line 3, ../../app/styles/_post.scss */
+.post {
+  height: 100px;
+  margin-top: 23px;
+  margin-bottom: 92px;
+  overflow: hidden;
+}
+/* line 10, ../../app/styles/_post.scss */
+.post .perma {
+  float: right;
+  padding-right: 10px;
+}
+/* line 14, ../../app/styles/_post.scss */
+.post .perma a {
+  text-decoration: none;
+  color: #ccc;
+}
+/* line 19, ../../app/styles/_post.scss */
+.post .perma a:hover {
+  color: #222;
+}
+
+/* line 25, ../../app/styles/_post.scss */
+.post_body {
+  border-right: 1px solid #ccc;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* line 30, ../../app/styles/_post.scss */
+.post_title {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* line 35, ../../app/styles/_post.scss */
+.post_timestamp {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 39, ../../app/styles/_post.scss */
+.post_content {
+  padding-right: 13px;
+  /*
+  Monokai style - ported by Luigi Maselli - http://grigio.org
+  */
+}
+/* line 42, ../../app/styles/_post.scss */
+.post_content h1 {
+  font-size: 1.2em;
+  margin-top: 1.0em;
+  margin-bottom: 0.3em;
+}
+/* line 48, ../../app/styles/_post.scss */
+.post_content img {
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+}
+/* line 56, ../../app/styles/_post.scss */
+.post_content li p {
+  display: inline;
+}
+/* line 61, ../../app/styles/_post.scss */
+.post_content li li {
+  padding-left: 1.5em;
+}
+/* line 66, ../../app/styles/_post.scss */
+.post_content ol, .post_content ul {
+  list-style-position: inside;
+}
+/* line 69, ../../app/styles/_post.scss */
+.post_content ul {
+  list-style-type: disc;
+}
+/* line 72, ../../app/styles/_post.scss */
+.post_content ol {
+  list-style-type: decimal;
+}
+/* line 76, ../../app/styles/_post.scss */
+.post_content code {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+/* line 5, ../../app/styles/_highlight.monokai.scss */
+.post_content pre code {
+  display: block;
+  padding: 0.5em;
+  background: #272822;
+}
+/* line 20, ../../app/styles/_highlight.monokai.scss */
+.post_content pre .tag,
+.post_content pre .tag .title,
+.post_content pre .keyword,
+.post_content pre .literal,
+.post_content pre .change,
+.post_content pre .winutils,
+.post_content pre .flow,
+.post_content pre .lisp .title,
+.post_content pre .clojure .built_in,
+.post_content pre .nginx .title,
+.post_content pre .tex .special {
+  color: #F92672;
+}
+/* line 24, ../../app/styles/_highlight.monokai.scss */
+.post_content pre code {
+  color: #DDD;
+}
+/* line 28, ../../app/styles/_highlight.monokai.scss */
+.post_content pre code .constant {
+  color: #66D9EF;
+}
+/* line 32, ../../app/styles/_highlight.monokai.scss */
+.post_content pre .class .title {
+  color: white;
+}
+/* line 40, ../../app/styles/_highlight.monokai.scss */
+.post_content pre .attribute,
+.post_content pre .symbol,
+.post_content pre .symbol .string,
+.post_content pre .value,
+.post_content pre .regexp {
+  color: #BF79DB;
+}
+/* line 68, ../../app/styles/_highlight.monokai.scss */
+.post_content pre .tag .value,
+.post_content pre .string,
+.post_content pre .subst,
+.post_content pre .title,
+.post_content pre .haskell .type,
+.post_content pre .preprocessor,
+.post_content pre .ruby .class .parent,
+.post_content pre .built_in,
+.post_content pre .sql .aggregate,
+.post_content pre .django .template_tag,
+.post_content pre .django .variable,
+.post_content pre .smalltalk .class,
+.post_content pre .javadoc,
+.post_content pre .django .filter .argument,
+.post_content pre .smalltalk .localvars,
+.post_content pre .smalltalk .array,
+.post_content pre .attr_selector,
+.post_content pre .pseudo,
+.post_content pre .addition,
+.post_content pre .stream,
+.post_content pre .envvar,
+.post_content pre .apache .tag,
+.post_content pre .apache .cbracket,
+.post_content pre .tex .command,
+.post_content pre .prompt {
+  color: #A6E22E;
+}
+/* line 81, ../../app/styles/_highlight.monokai.scss */
+.post_content pre .comment,
+.post_content pre .java .annotation,
+.post_content pre .python .decorator,
+.post_content pre .template_comment,
+.post_content pre .pi,
+.post_content pre .doctype,
+.post_content pre .deletion,
+.post_content pre .shebang,
+.post_content pre .apache .sqbracket,
+.post_content pre .tex .formula {
+  color: #75715E;
+}
+/* line 91, ../../app/styles/_highlight.monokai.scss */
+.post_content pre .coffeescript .javascript,
+.post_content pre .javascript .xml,
+.post_content pre .tex .formula,
+.post_content pre .xml .javascript,
+.post_content pre .xml .vbscript,
+.post_content pre .xml .css,
+.post_content pre .xml .cdata {
+  opacity: 0.5;
+}
+/* line 85, ../../app/styles/_post.scss */
+.post_content pre code {
+  font-family: 'PT Mono', sans-serif;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+/* line 3, ../../app/styles/_comment.scss */
+.comments > .comment {
+  border-top: 1px solid #ccc;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-top: 23px;
+  overflow: hidden;
+}
+/* line 10, ../../app/styles/_comment.scss */
+.comments > .comment .comment_timestamp {
+  float: right;
+  margin-right: 0.3em;
+}
+/* line 15, ../../app/styles/_comment.scss */
+.comments > .comment .comment_avatar {
+  margin: 0.5em;
+  float: left;
+  width: 13%;
+}
+/* line 20, ../../app/styles/_comment.scss */
+.comments > .comment .comment_avatar img {
+  max-width: 80px;
+}
+/* line 25, ../../app/styles/_comment.scss */
+.comments > .comment .comment_author {
+  font-weight: bold;
+}
+/* line 29, ../../app/styles/_comment.scss */
+.comments > .comment .comment_content {
+  float: left;
+  width: 83%;
+  min-height: 100px;
+  height: auto !important;
+  height: 100px;
+  font-size: 1.0em;
+  /*
+  Monokai style - ported by Luigi Maselli - http://grigio.org
+  */
+}
+/* line 35, ../../app/styles/_comment.scss */
+.comments > .comment .comment_content h1, .comments > .comment .comment_content h2, .comments > .comment .comment_content h3, .comments > .comment .comment_content h4, .comments > .comment .comment_content h5, .comments > .comment .comment_content h6 {
+  font-size: 1.1em;
+}
+/* line 39, ../../app/styles/_comment.scss */
+.comments > .comment .comment_content img {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+/* line 5, ../../app/styles/_highlight.monokai.scss */
+.comments > .comment .comment_content pre code {
+  display: block;
+  padding: 0.5em;
+  background: #272822;
+}
+/* line 20, ../../app/styles/_highlight.monokai.scss */
+.comments > .comment .comment_content pre .tag,
+.comments > .comment .comment_content pre .tag .title,
+.comments > .comment .comment_content pre .keyword,
+.comments > .comment .comment_content pre .literal,
+.comments > .comment .comment_content pre .change,
+.comments > .comment .comment_content pre .winutils,
+.comments > .comment .comment_content pre .flow,
+.comments > .comment .comment_content pre .lisp .title,
+.comments > .comment .comment_content pre .clojure .built_in,
+.comments > .comment .comment_content pre .nginx .title,
+.comments > .comment .comment_content pre .tex .special {
+  color: #F92672;
+}
+/* line 24, ../../app/styles/_highlight.monokai.scss */
+.comments > .comment .comment_content pre code {
+  color: #DDD;
+}
+/* line 28, ../../app/styles/_highlight.monokai.scss */
+.comments > .comment .comment_content pre code .constant {
+  color: #66D9EF;
+}
+/* line 32, ../../app/styles/_highlight.monokai.scss */
+.comments > .comment .comment_content pre .class .title {
+  color: white;
+}
+/* line 40, ../../app/styles/_highlight.monokai.scss */
+.comments > .comment .comment_content pre .attribute,
+.comments > .comment .comment_content pre .symbol,
+.comments > .comment .comment_content pre .symbol .string,
+.comments > .comment .comment_content pre .value,
+.comments > .comment .comment_content pre .regexp {
+  color: #BF79DB;
+}
+/* line 68, ../../app/styles/_highlight.monokai.scss */
+.comments > .comment .comment_content pre .tag .value,
+.comments > .comment .comment_content pre .string,
+.comments > .comment .comment_content pre .subst,
+.comments > .comment .comment_content pre .title,
+.comments > .comment .comment_content pre .haskell .type,
+.comments > .comment .comment_content pre .preprocessor,
+.comments > .comment .comment_content pre .ruby .class .parent,
+.comments > .comment .comment_content pre .built_in,
+.comments > .comment .comment_content pre .sql .aggregate,
+.comments > .comment .comment_content pre .django .template_tag,
+.comments > .comment .comment_content pre .django .variable,
+.comments > .comment .comment_content pre .smalltalk .class,
+.comments > .comment .comment_content pre .javadoc,
+.comments > .comment .comment_content pre .django .filter .argument,
+.comments > .comment .comment_content pre .smalltalk .localvars,
+.comments > .comment .comment_content pre .smalltalk .array,
+.comments > .comment .comment_content pre .attr_selector,
+.comments > .comment .comment_content pre .pseudo,
+.comments > .comment .comment_content pre .addition,
+.comments > .comment .comment_content pre .stream,
+.comments > .comment .comment_content pre .envvar,
+.comments > .comment .comment_content pre .apache .tag,
+.comments > .comment .comment_content pre .apache .cbracket,
+.comments > .comment .comment_content pre .tex .command,
+.comments > .comment .comment_content pre .prompt {
+  color: #A6E22E;
+}
+/* line 81, ../../app/styles/_highlight.monokai.scss */
+.comments > .comment .comment_content pre .comment,
+.comments > .comment .comment_content pre .java .annotation,
+.comments > .comment .comment_content pre .python .decorator,
+.comments > .comment .comment_content pre .template_comment,
+.comments > .comment .comment_content pre .pi,
+.comments > .comment .comment_content pre .doctype,
+.comments > .comment .comment_content pre .deletion,
+.comments > .comment .comment_content pre .shebang,
+.comments > .comment .comment_content pre .apache .sqbracket,
+.comments > .comment .comment_content pre .tex .formula {
+  color: #75715E;
+}
+/* line 91, ../../app/styles/_highlight.monokai.scss */
+.comments > .comment .comment_content pre .coffeescript .javascript,
+.comments > .comment .comment_content pre .javascript .xml,
+.comments > .comment .comment_content pre .tex .formula,
+.comments > .comment .comment_content pre .xml .javascript,
+.comments > .comment .comment_content pre .xml .vbscript,
+.comments > .comment .comment_content pre .xml .css,
+.comments > .comment .comment_content pre .xml .cdata {
+  opacity: 0.5;
+}
+/* line 48, ../../app/styles/_comment.scss */
+.comments > .comment .comment_content pre code {
+  font-family: 'PT Mono', sans-serif;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+/* line 55, ../../app/styles/_comment.scss */
+.comments > .comment .editable {
+  outline: none;
+  border: 1px solid #eee;
+  -webkit-transition: box-shadow 0.3s ease-in;
+  -moz-transition: box-shadow 0.3s ease-in;
+  -o-transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  font-family: 'PT Mono', sans-serif;
+  line-height: 1.2em;
+  resize: none;
+}
+/* line 65, ../../app/styles/_comment.scss */
+.comments > .comment .editable:hover, .comments > .comment .editable:focus {
+  -webkit-box-shadow: #88aacc 0 0 7px;
+  -moz-box-shadow: #88aacc 0 0 7px;
+  box-shadow: #88aacc 0 0 7px;
+}
+/* line 69, ../../app/styles/_comment.scss */
+.comments > .comment .comment_post_link {
+  float: right;
+  padding-right: 15px;
+}

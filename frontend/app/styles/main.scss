@@ -1,0 +1,42 @@
+@import "shared_variables";
+
+@import "compass";
+@import "compass/reset";
+
+body {
+    overflow-y: scroll;
+    line-height: 1.8em;
+
+    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+    color: #444;
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    text-transform: capitalize;
+
+    color: #222;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.7em;
+}
+
+#content {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@import "header";
+@import "post";
+@import "comment";
+
