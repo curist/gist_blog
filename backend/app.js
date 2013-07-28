@@ -28,6 +28,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/api/posts', api.posts);
+app.get('/api/posts/:id', api.post_with_id);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

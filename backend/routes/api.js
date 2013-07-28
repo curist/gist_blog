@@ -1,21 +1,40 @@
 var redis = require('redis');
 var redis_client = redis.createClient();
+var when = require('when');
 
 var Post = require('../models/post');
 exports.posts = function(req, res){
-  redis_client.get('all_posts', function(err, result) {
+  promise_get('all_posts', Post.find())
+    .then(function(result) {
+      res.json(result);
+    });
+};
+
+exports.post_with_id = function(req, res) {
+  var post_id = req.params.id;
+  var key = 'posts/' + post_id;
+  promise_get(key, Post.find({id: post_id}))
+    .then(function(result) {
+      res.json(result);
+    });
+};
+
+function promise_get(key, query) {
+  var expire_time = 300; // 5 mins
+  var deferred = when.defer();
+  redis_client.get(key, function(err, result) {
     if(err || !result) {
-      var query = Post.find();
-      query.exec().on('complete', function(posts) {
-        res.json(posts);
+      query.exec().on('complete', function(query_result) {
         redis_client.setex(
-          'all_posts',
-          5 * 60, // 5 mins
-          JSON.stringify(posts)
+          key,
+          expire_time,
+          JSON.stringify(query_result)
         );
+        deferred.resolve(query_result);
       });
     } else {
-      res.json(JSON.parse(result));
+      deferred.resolve(JSON.parse(result));
     }
   });
-};
+  return deferred.promise;
+}
