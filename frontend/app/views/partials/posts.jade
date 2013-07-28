@@ -6,5 +6,6 @@
     .post_body
       .post_timestamp(ng-bind="post.real_time")
       .post_title
-        h2(ng-bind="post.description")
+        h2
+          a(ng-href="#/posts/{{ post.id }}", ng-bind="post.description")
       .post_content(ng-bind-html-unsafe="post.post_content")
